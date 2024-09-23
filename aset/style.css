@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main,
+footer {
+  font-family: sans-serif;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-family: "Anton", sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 1em;
+  margin: 1rem;
+}
+
+/* navigasi */
+
+.navigasi {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: black;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+.nav-logo {
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.nav-logo img {
+  height: 2rem;
+}
+.navigasi ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem 1rem;
+  margin-right: 10%;
+  list-style-type: none;
+}
+.navigasi ul li a {
+  text-decoration: none;
+  color: white;
+}
+.burger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+}
+
+/* main */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+  margin-top: 4rem;
+}
+
+/* article */
+#content {
+  width: 69%;
+}
+#content img {
+  width: 100%;
+}
+
+#program {
+  order: 3;
+}
+
+/* program */
+
+.program .heading {
+  display: flex;
+  justify-content: center;
+}
+.program .content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.program .content .card {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+.face {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.face a {
+  text-decoration: none;
+}
+.program .content .card .img {
+  width: 75%;
+}
+.btn {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* aside */
+
+aside {
+  order: 2;
+  width: 25%;
+}
+
+.kontak {
+  width: 100%;
+  padding: 0 0;
+  position: sticky;
+  top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kontak img {
+  height: 10rem;
+  border-radius: 50%;
+}
+.kontak h3 {
+  font-size: 3rem;
+  margin: 0;
+}
+.media {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.media ul {
+  width: 100%;
+  height: 10rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.media li {
+  width: 40%;
+  height: 3rem;
+  list-style-type: none;
+  border: #c7c7c7 1px solid;
+  border-radius: 5px;
+}
+.media li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+  height: 100%;
+  width: 100%;
+}
+.media.buttom li {
+  width: 100%;
+  margin: 0 0.8rem 0 0.8rem;
+}
+.media li:hover {
+  transform: scale(1.1);
+  border: #000000 1px solid;
+}
+.media li a:hover {
+  font-size: 2rem;
+}
+.media #youtube a:hover {
+  color: #ff0100;
+}
+.media #instagram a:hover {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  background-clip: text;
+  color: transparent;
+}
+.media #linkedin a:hover {
+  color: #0077af;
+}
+.media #facebook a:hover {
+  color: #395498;
+}
+.media #github a:hover {
+  color: white;
+  background: #000;
+  border-radius: 3%;
+}
+
+/* footer */
+
+.bottom {
+  width: 100%;
+  height: 2rem;
+  margin: 0;
+  background: white;
+  border-radius: 0 0 10px 100px;
+}
+footer {
+  height: 10rem;
+  color: white;
+  background-color: black;
+  text-align: center;
+  font-weight: bold;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer h3 {
+  margin-top: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  /* navigasi */
+
+  .navigasi h1 {
+    font-size: 1.5rem;
+    letter-spacing: 0.08rem;
+  }
+
+  .navigasi ul {
+    display: none;
+    flex-direction: column;
+    width: 50%;
+    gap: 1rem;
+    background: black;
+    position: absolute;
+    right: -2.8rem;
+    top: 3rem;
+  }
+  .burger {
+    display: flex;
+    margin-right: 0;
+  }
+  .navigasi ul.active {
+    display: flex;
+    padding-bottom: 1rem;
+  }
+
+  /* Content*/
+
+  main {
+    align-items: center;
+  }
+  article {
+    width: 100%;
+    padding: 0;
+  }
+  #content {
+    width: 100%;
+
+    margin: 0;
+  }
+  #program {
+    margin: 0;
+    box-shadow: none;
+  }
+  .program .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .program .content .card {
+    width: 100%;
+  }
+
+  /* kontak */
+  .kontak {
+    width: 100%;
+  }
+  .kontak img {
+    height: 12rem;
+  }
+  .kontak h3 {
+    margin: 0;
+  }
+  .kontak .media ul li {
+    width: 45%;
+  }
+  /* Footer */
+  footer {
+    padding: 1rem;
+    height: fit-content;
+  }
+  footer .bottom {
+    display: none;
+  }
+  footer h3 {
+    margin: 0xx;
+  }
+  aside {
+    order: 3;
+    width: 100%;
+  }
+}
